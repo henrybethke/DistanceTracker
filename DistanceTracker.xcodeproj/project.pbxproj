@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		BAB0D1FA2081BA0600993D40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB0D1F92081BA0600993D40 /* AppDelegate.swift */; };
-		BAB0D1FC2081BA0600993D40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB0D1FB2081BA0600993D40 /* ViewController.swift */; };
+		BAB0D1FC2081BA0600993D40 /* TrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB0D1FB2081BA0600993D40 /* TrackingViewController.swift */; };
 		BAB0D1FF2081BA0600993D40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB0D1FD2081BA0600993D40 /* Main.storyboard */; };
 		BAB0D2012081BA0C00993D40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB0D2002081BA0C00993D40 /* Assets.xcassets */; };
 		BAB0D2042081BA0C00993D40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB0D2022081BA0C00993D40 /* LaunchScreen.storyboard */; };
+		BAB0D20C2081C58800993D40 /* TrackingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB0D20B2081C58800993D40 /* TrackingState.swift */; };
+		BAF38B4F214B46B9008B7292 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF38B4E214B46B9008B7292 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BAB0D1F62081BA0600993D40 /* DistanceTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DistanceTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB0D1F92081BA0600993D40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BAB0D1FB2081BA0600993D40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BAB0D1FB2081BA0600993D40 /* TrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
 		BAB0D1FE2081BA0600993D40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BAB0D2002081BA0C00993D40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAB0D2032081BA0C00993D40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAB0D2052081BA0C00993D40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAB0D20B2081C58800993D40 /* TrackingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingState.swift; sourceTree = "<group>"; };
+		BAF38B4E214B46B9008B7292 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				BAB0D1F82081BA0600993D40 /* DistanceTracker */,
+				BAF38B4D214B428E008B7292 /* DistanceTrackerTests */,
 				BAB0D1F72081BA0600993D40 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,13 +60,22 @@
 			isa = PBXGroup;
 			children = (
 				BAB0D1F92081BA0600993D40 /* AppDelegate.swift */,
-				BAB0D1FB2081BA0600993D40 /* ViewController.swift */,
+				BAB0D1FB2081BA0600993D40 /* TrackingViewController.swift */,
 				BAB0D1FD2081BA0600993D40 /* Main.storyboard */,
 				BAB0D2002081BA0C00993D40 /* Assets.xcassets */,
 				BAB0D2022081BA0C00993D40 /* LaunchScreen.storyboard */,
 				BAB0D2052081BA0C00993D40 /* Info.plist */,
+				BAB0D20B2081C58800993D40 /* TrackingState.swift */,
+				BAF38B4E214B46B9008B7292 /* Constants.swift */,
 			);
 			path = DistanceTracker;
+			sourceTree = "<group>";
+		};
+		BAF38B4D214B428E008B7292 /* DistanceTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DistanceTrackerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAB0D1FC2081BA0600993D40 /* ViewController.swift in Sources */,
+				BAB0D1FC2081BA0600993D40 /* TrackingViewController.swift in Sources */,
+				BAB0D20C2081C58800993D40 /* TrackingState.swift in Sources */,
 				BAB0D1FA2081BA0600993D40 /* AppDelegate.swift in Sources */,
+				BAF38B4F214B46B9008B7292 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
