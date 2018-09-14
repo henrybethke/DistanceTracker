@@ -10,6 +10,7 @@ import Foundation
 import CoreLocation
 
 struct Shot {
+    
     var distance: Int
     var location: CLLocation?
     var date: Date

@@ -27,16 +27,6 @@ class TrackingViewController: UIViewController, CLLocationManagerDelegate, UIAle
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var trackButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.distanceFilter = kCLDistanceFilterNone
-        
-        locationManager.startUpdatingLocation()
-    }
-
     @IBAction func trackButtonTapped(_ sender: Any) {
         if state == .Tracking {
             showAlert()
@@ -46,7 +36,17 @@ class TrackingViewController: UIViewController, CLLocationManagerDelegate, UIAle
     }
     
     @IBAction func myShotsButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "myShotsSegue", sender: self)
+        performSegue(withIdentifier: Constants.myShotsSegue, sender: self)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = kCLDistanceFilterNone
+        
+        locationManager.startUpdatingLocation()
     }
     
     func updateTrackButton() {
@@ -74,11 +74,11 @@ class TrackingViewController: UIViewController, CLLocationManagerDelegate, UIAle
     }
     
     func showAlert() {
-        let alertController = UIAlertController(title: "Save shot?", message: "", preferredStyle: .actionSheet)
-        alertController.addAction(UIAlertAction(title: "Save", style: .default, handler: {_ in
+        let alertController = UIAlertController(title: Constants.saveShotText, message: "", preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: Constants.saveActionText, style: .default, handler: {_ in
             self.saveShot()
         }))
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {_ in
+        alertController.addAction(UIAlertAction(title: Constants.cancelActionText, style: .cancel, handler: {_ in
             self.resetTracking()
         }))
         self.present(alertController, animated: true, completion: nil)
@@ -87,12 +87,13 @@ class TrackingViewController: UIViewController, CLLocationManagerDelegate, UIAle
     func saveShot() {
         let shot = Shot(distance: self.distance, location: self.locationManager.location, date: Date())
         self.shots.append(shot)
+        sortShots(self.shots)
         
         resetTracking()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "myShotsSegue" {
+        if segue.identifier == Constants.myShotsSegue {
             let destinationController = segue.destination as? MyShotsTableViewController
             destinationController?.shots = self.shots
         }
@@ -101,5 +102,9 @@ class TrackingViewController: UIViewController, CLLocationManagerDelegate, UIAle
     func resetTracking() {
         self.distance = 0
         self.state = .Idle
+    }
+    
+    func sortShots(_ shots: [Shot]) {
+        self.shots = shots.sorted(by: {$0.distance > $1.distance} )
     }
 }
