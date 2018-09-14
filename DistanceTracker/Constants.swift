@@ -9,5 +9,7 @@
 import Foundation
 
 public class Constants {
-    public static let yardsPerMeter = 1.09361
+    static let yardsPerMeter = 1.09361
+    static let trackLabelText = "Track"
+    static let stopLabelText = "Stop"
 }

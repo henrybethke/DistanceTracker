@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA9AF34F214B675D00A3CC99 /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9AF34E214B675D00A3CC99 /* Shot.swift */; };
+		BA9AF353214B698A00A3CC99 /* MyShotsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9AF352214B698A00A3CC99 /* MyShotsTableViewController.swift */; };
 		BAB0D1FA2081BA0600993D40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB0D1F92081BA0600993D40 /* AppDelegate.swift */; };
 		BAB0D1FC2081BA0600993D40 /* TrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB0D1FB2081BA0600993D40 /* TrackingViewController.swift */; };
 		BAB0D1FF2081BA0600993D40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB0D1FD2081BA0600993D40 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA9AF34E214B675D00A3CC99 /* Shot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shot.swift; sourceTree = "<group>"; };
+		BA9AF352214B698A00A3CC99 /* MyShotsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShotsTableViewController.swift; sourceTree = "<group>"; };
 		BAB0D1F62081BA0600993D40 /* DistanceTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DistanceTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB0D1F92081BA0600993D40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAB0D1FB2081BA0600993D40 /* TrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				BAB0D2052081BA0C00993D40 /* Info.plist */,
 				BAB0D20B2081C58800993D40 /* TrackingState.swift */,
 				BAF38B4E214B46B9008B7292 /* Constants.swift */,
+				BA9AF34E214B675D00A3CC99 /* Shot.swift */,
+				BA9AF352214B698A00A3CC99 /* MyShotsTableViewController.swift */,
 			);
 			path = DistanceTracker;
 			sourceTree = "<group>";
@@ -151,7 +157,9 @@
 			files = (
 				BAB0D1FC2081BA0600993D40 /* TrackingViewController.swift in Sources */,
 				BAB0D20C2081C58800993D40 /* TrackingState.swift in Sources */,
+				BA9AF353214B698A00A3CC99 /* MyShotsTableViewController.swift in Sources */,
 				BAB0D1FA2081BA0600993D40 /* AppDelegate.swift in Sources */,
+				BA9AF34F214B675D00A3CC99 /* Shot.swift in Sources */,
 				BAF38B4F214B46B9008B7292 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
